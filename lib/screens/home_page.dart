@@ -52,7 +52,7 @@ Widget build(BuildContext context) {
               ],
             ),
           ),
-          // Tombol Logout dipindahkan ke bawah
+          
           Container(
             alignment: Alignment.bottomCenter,
             child: Padding(
@@ -67,7 +67,7 @@ Widget build(BuildContext context) {
                   );
                 },
                 style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.blue), // Set color of the text
+                  foregroundColor: MaterialStateProperty.all(Colors.blue), 
                 ),
                 child: Text('Logout'),
               ),
