@@ -13,7 +13,7 @@ class RegisterPage extends StatelessWidget {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage()), // Setelah daftar, masuk ke halaman login
+      MaterialPageRoute(builder: (context) => LoginPage()), 
     );
   }
 
@@ -44,7 +44,7 @@ class RegisterPage extends StatelessWidget {
             SizedBox(height: 20),
             TextButton(
               onPressed: () {
-                // Arahkan ke halaman login jika sudah punya akun
+               
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => LoginPage()),
