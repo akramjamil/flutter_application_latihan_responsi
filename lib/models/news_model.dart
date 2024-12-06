@@ -4,7 +4,7 @@ class News {
   final String summary;
   final String imageUrl;
   final String url;
-  final String date;  // Menambahkan properti date
+  final String date;  
 
   News({
     required this.id,
@@ -12,10 +12,10 @@ class News {
     required this.summary,
     required this.imageUrl,
     required this.url,
-    required this.date,  // Menambahkan parameter date
+    required this.date,  
   });
 
-  // Factory constructor untuk membuat instance News dari JSON
+  
   factory News.fromJson(Map<String, dynamic> json) {
     return News(
       id: json['id'],
@@ -23,7 +23,7 @@ class News {
       summary: json['summary'] ?? 'No Summary',
       imageUrl: json['image_url'] ?? '',
       url: json['url'] ?? '',
-      date: json['published_at'] ?? 'No Date',  // Ambil data tanggal dari API
+      date: json['published_at'] ?? 'No Date',  
     );
   }
 }
