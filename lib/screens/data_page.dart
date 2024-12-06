@@ -13,14 +13,14 @@ class DataPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(category)),
       body: FutureBuilder(
-        future: ApiService.fetchList(category), // Mengambil daftar berita
+        future: ApiService.fetchList(category), 
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else {
-            final items = snapshot.data as List<News>;  // Mendapatkan list dari News model
+            final items = snapshot.data as List<News>; 
             return ListView.builder(
               itemCount: items.length,
               itemBuilder: (context, index) {
@@ -42,7 +42,7 @@ class DataPage extends StatelessWidget {
                         Text(newsItem.summary),
                         SizedBox(height: 4),
                         Text(
-                          'Published on: ${newsItem.date}', // Tampilkan tanggal
+                          'Published on: ${newsItem.date}', 
                           style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                       ],
