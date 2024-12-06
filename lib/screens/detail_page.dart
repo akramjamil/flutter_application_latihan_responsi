@@ -22,14 +22,14 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Detail')),
       body: FutureBuilder<News>(
-        future: ApiService.fetchDetail(category, id), // Mengambil data detail berita
+        future: ApiService.fetchDetail(category, id), 
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else {
-            final data = snapshot.data!;  // Ambil data News yang sudah diparse
+            final data = snapshot.data!; 
             return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -52,7 +52,7 @@ class DetailPage extends StatelessWidget {
                   Text(data.summary, style: TextStyle(fontSize: 16)),
                   SizedBox(height: 10),
                   Text(
-                    'Published on: ${data.date}', // Menambahkan tanggal
+                    'Published on: ${data.date}', 
                     style: TextStyle(fontSize: 14, color: Colors.grey[600]),
                   ),
                   Spacer(),
