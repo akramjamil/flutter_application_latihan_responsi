@@ -13,13 +13,13 @@ class LoginPage extends StatelessWidget {
     String storedPassword = prefs.getString('password') ?? '';
 
     if (usernameController.text == storedUsername && passwordController.text == storedPassword) {
-      // Jika username dan password cocok, arahkan ke HomePage
+    
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomePage()),
       );
     } else {
-      // Jika username dan password salah
+     
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Incorrect username or password')),
       );
@@ -53,7 +53,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 20),
             TextButton(
               onPressed: () {
-                // Arahkan ke halaman register jika belum punya akun
+               
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => RegisterPage()),
