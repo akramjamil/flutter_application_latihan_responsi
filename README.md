@@ -1,6 +1,8 @@
 # flutter_application_latres
 
 A new Flutter project.
+Nama: Akram Jamil
+NIM: 124220127
 
 ## Getting Started
 
